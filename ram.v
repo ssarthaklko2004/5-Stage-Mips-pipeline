@@ -17,10 +17,6 @@ module ram(data_out,data_in,addr,mem_re,mem_we,clk);
           mem[addr]<=data_in;
          
   end
-  always @(posedge clk) begin
-    if(mem_we) begin
-        $display("RAM WRITE addr=%d data=%h",addr,data_in);
-        mem[addr]<=data_in;
-    end
+
 end
     endmodule
